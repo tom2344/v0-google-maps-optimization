@@ -8,12 +8,12 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2">
               <span className="text-xl font-bold tracking-tight font-serif">
-                TTamas
+                Tamas
               </span>
               <span className="text-xl font-light opacity-70">Marketing</span>
             </Link>
             <p className="mt-2 text-sm opacity-60">
-              info@ttamasmarketing.com
+              info@tamasmarketing.com
             </p>
           </div>
 
@@ -22,13 +22,13 @@ export function Footer() {
               href="/"
               className="text-sm opacity-70 transition-opacity hover:opacity-100"
             >
-              Google Terkep
+              Google Térkép
             </Link>
             <Link
               href="/weboldal"
               className="text-sm opacity-70 transition-opacity hover:opacity-100"
             >
-              Weboldal Keszites
+              Weboldal Készítés
             </Link>
             <a
               href="https://x.com/TTokoli63778"
@@ -50,7 +50,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 border-t border-primary-foreground/10 pt-8 text-center text-xs opacity-50">
-          {'© 2026 TTamas Marketing. Minden jog fenntartva.'}
+          {'© 2026 Tamas Marketing. Minden jog fenntartva.'}
         </div>
       </div>
     </footer>

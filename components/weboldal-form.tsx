@@ -38,10 +38,10 @@ export function WeboldalForm() {
             <Send className="h-7 w-7" />
           </div>
           <h3 className="mt-6 font-serif text-2xl text-foreground">
-            Koszonjuk!
+            Köszönjük!
           </h3>
           <p className="mt-2 text-muted-foreground">
-            Hamarosan felvesszuk Onnel a kapcsolatot.
+            Hamarosan felvesszük Önnel a kapcsolatot.
           </p>
         </div>
       </section>
@@ -53,10 +53,10 @@ export function WeboldalForm() {
       <div className="mx-auto max-w-xl">
         <div className="mb-12 text-center">
           <h2 className="font-serif text-3xl tracking-tight text-foreground md:text-4xl text-balance">
-            Ajanlatot kerek
+            Ajánlatot kérek
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Toltse ki az alabbi urlapot, es felvesszuk Onnel a kapcsolatot.
+            Töltse ki az alábbi űrlapot, és felvesszük Önnel a kapcsolatot.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export function WeboldalForm() {
                 htmlFor="web-name"
                 className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted-foreground"
               >
-                Nev
+                Név
               </label>
               <input
                 id="web-name"
@@ -82,7 +82,7 @@ export function WeboldalForm() {
                 htmlFor="web-company"
                 className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted-foreground"
               >
-                Ceg neve
+                Cég neve
               </label>
               <input
                 id="web-company"
@@ -116,7 +116,7 @@ export function WeboldalForm() {
                 htmlFor="web-city"
                 className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted-foreground"
               >
-                Varos
+                Város
               </label>
               <input
                 id="web-city"
@@ -131,7 +131,7 @@ export function WeboldalForm() {
                 htmlFor="web-phone"
                 className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted-foreground"
               >
-                Telefonszam
+                Telefonszám
               </label>
               <input
                 id="web-phone"
@@ -169,7 +169,7 @@ export function WeboldalForm() {
             ) : (
               <Send className="h-4 w-4" />
             )}
-            Bekuldes
+            Beküldés
           </button>
         </form>
       </div>

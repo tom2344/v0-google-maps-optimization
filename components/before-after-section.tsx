@@ -4,17 +4,17 @@ import { useState } from "react"
 import Image from "next/image"
 
 const beforeStats = [
-  { label: "Atlagos helyezes", value: "18" },
-  { label: "Piaci reszesedes", value: "5%" },
-  { label: "Havi kattintasok", value: "30" },
-  { label: "Havi ugyfelek", value: "5-8" },
+  { label: "Átlagos helyezés", value: "18" },
+  { label: "Piaci részesedés", value: "5%" },
+  { label: "Havi kattintások", value: "30" },
+  { label: "Havi ügyfelek", value: "5-8" },
 ]
 
 const afterStats = [
-  { label: "Atlagos helyezes", value: "2" },
-  { label: "Piaci reszesedes", value: "60%+" },
-  { label: "Havi kattintasok", value: "120+" },
-  { label: "Havi ugyfelek", value: "15+" },
+  { label: "Átlagos helyezés", value: "2" },
+  { label: "Piaci részesedés", value: "60%+" },
+  { label: "Havi kattintások", value: "120+" },
+  { label: "Havi ügyfelek", value: "15+" },
 ]
 
 export function BeforeAfterSection() {
@@ -25,7 +25,7 @@ export function BeforeAfterSection() {
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
           <h2 className="font-serif text-3xl tracking-tight text-foreground md:text-4xl text-balance">
-            Az On cege - Pelda utca 12, 6720 Szeged
+            Az Ön cége - Példa utca 12, 6720 Szeged
           </h2>
         </div>
 
@@ -40,7 +40,7 @@ export function BeforeAfterSection() {
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              Elotte
+              Előtte
             </button>
             <button
               onClick={() => setActiveTab("after")}
@@ -50,7 +50,7 @@ export function BeforeAfterSection() {
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              Utana
+              Utána
             </button>
           </div>
         </div>
@@ -61,7 +61,7 @@ export function BeforeAfterSection() {
             {activeTab === "before" ? (
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OKqaW3n1GqRBTY0NUG8eddWRGBBo8G.png"
-                alt="Google Terkep helyezesek optimalizalas elott - piros jelolokonnel, tobbseguk 20-as helyezest mutat"
+                alt="Google Térkép helyezések optimalizálás előtt - piros jelölőkkel, többségük 20-as helyezést mutat"
                 width={760}
                 height={760}
                 className="w-full"
@@ -69,7 +69,7 @@ export function BeforeAfterSection() {
             ) : (
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-tD9FKxs3qTT8vPn2yHqlGSO4unxP1D.png"
-                alt="Google Terkep helyezesek optimalizalas utan - zold jelolokonnel, tobbseguk 1-es helyezest mutat"
+                alt="Google Térkép helyezések optimalizálás után - zöld jelölőkkel, többségük 1-es helyezést mutat"
                 width={940}
                 height={860}
                 className="w-full"
@@ -86,7 +86,7 @@ export function BeforeAfterSection() {
                   : "bg-accent/10 text-accent"
               }`}
             >
-              {activeTab === "before" ? "Optimalizalas elott" : "Optimalizalas utan"}
+              {activeTab === "before" ? "Optimalizálás előtt" : "Optimalizálás után"}
             </div>
 
             <div className="grid grid-cols-2 gap-6">

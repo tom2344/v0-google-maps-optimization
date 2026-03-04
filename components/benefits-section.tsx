@@ -3,21 +3,21 @@ import { Eye, Banknote, TrendingUp } from "lucide-react"
 const benefits = [
   {
     icon: Eye,
-    title: "Lathatosag",
+    title: "Láthatóság",
     description:
-      "Az ugyfelek 75%-a az elso 5 talalat kozul valaszt szolgaltatot. Ha nincs koztuk, nem Ont fogjak hivni.",
+      "Az ügyfelek 75%-a az első 5 találat közül választ szolgáltatót. Ha nincs köztük, nem Önt fogják hívni.",
   },
   {
     icon: Banknote,
     title: "Ingyenes forgalom",
     description:
-      "Nincs kattintasonkenti fizetes. Nincs hatalmas hirdetesi budzse, mint Google vagy Meta Ads eseten.",
+      "Nincs kattintásonkénti fizetés. Nincs hatalmas hirdetési büdzsé, mint Google vagy Meta Ads esetén.",
   },
   {
     icon: TrendingUp,
-    title: "Hosszu tavu strategia",
+    title: "Hosszú távú stratégia",
     description:
-      "Ha bekerul az elso 5-be, jellemzoen evekig ott marad. Extra havi hirdetesi koltsegek nelkul.",
+      "Ha bekerül az első 5-be, jellemzően évekig ott marad. Extra havi hirdetési költségek nélkül.",
   },
 ]
 
@@ -27,7 +27,7 @@ export function BenefitsSection() {
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
           <h2 className="font-serif text-3xl tracking-tight text-foreground md:text-4xl text-balance">
-            Megeri ez egyaltalan?
+            Megéri ez egyáltalán?
           </h2>
         </div>
 

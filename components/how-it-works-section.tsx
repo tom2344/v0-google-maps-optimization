@@ -4,29 +4,29 @@ const steps = [
   {
     number: "01",
     icon: ClipboardList,
-    title: "Ingyenes elemzes",
-    description: "Toltse ki az urlapot, es elemezzuk jelenlegi helyzetet.",
+    title: "Ingyenes elemzés",
+    description: "Töltse ki az űrlapot, és elemezzük jelenlegi helyzetét.",
   },
   {
     number: "02",
     icon: Rocket,
-    title: "Indulas",
+    title: "Indulás",
     description:
-      "Reszletes utmutatot kuldunk, hogyan adhat biztonsagos hozzaferest a profiljához.",
+      "Részletes útmutatót küldünk, hogyan adhat biztonságos hozzáférést a profiljához.",
   },
   {
     number: "03",
     icon: Settings,
-    title: "Kivitelezes",
+    title: "Kivitelezés",
     description:
-      "Vegigmegyunk a teljes optimalizalasi folyamaton, hogy megtoltsuk a naptarat.",
+      "Végigmegyünk a teljes optimalizálási folyamaton, hogy megtöltsük a naptárát.",
   },
   {
     number: "04",
     icon: BarChart3,
-    title: "Mi mukodik?",
+    title: "Mi működik?",
     description:
-      "Merjuk az adatokat, es arra fokuszalunk, ami valoban ugyfelet hoz.",
+      "Mérjük az adatokat, és arra fókuszálunk, ami valóban ügyfelet hoz.",
   },
 ]
 
@@ -36,10 +36,10 @@ export function HowItWorksSection() {
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
           <h2 className="font-serif text-3xl tracking-tight text-primary-foreground md:text-4xl text-balance">
-            Hogyan mukodik?
+            Hogyan működik?
           </h2>
           <p className="mt-4 text-primary-foreground/60">
-            Egyszerubb, mint gondolna.
+            Egyszerűbb, mint gondolná.
           </p>
         </div>
 

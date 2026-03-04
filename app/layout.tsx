@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-inter" 
 const dmSerif = DM_Serif_Display({ weight: "400", subsets: ["latin", "latin-ext"], variable: "--font-dm-serif" });
 
 export const metadata: Metadata = {
-  title: 'TTamas Marketing | Google Terkep Optimalizalas',
-  description: 'Top 5 helyezes a Google terkepen 90 napon belul - Garantalva. Professzionalis weboldal keszites vallalkozasoknak.',
+  title: 'Tamas Marketing | Google Térkép Optimalizálás',
+  description: 'Top 5 helyezés a Google térképen 90 napon belül - Garantálva. Professzionális weboldal készítés vállalkozásoknak.',
 }
 
 export default function RootLayout({

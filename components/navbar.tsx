@@ -14,7 +14,7 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2">
           <span className="text-xl font-bold tracking-tight text-foreground font-serif">
-            TTamas
+            Tamas
           </span>
           <span className="text-xl font-light text-muted-foreground">Marketing</span>
         </Link>
@@ -27,7 +27,7 @@ export function Navbar() {
               pathname === "/" ? "text-foreground" : "text-muted-foreground"
             }`}
           >
-            Google Terkep
+            Google Térkép
           </Link>
           <Link
             href="/weboldal"
@@ -35,7 +35,7 @@ export function Navbar() {
               pathname === "/weboldal" ? "text-foreground" : "text-muted-foreground"
             }`}
           >
-            Weboldal Keszites
+            Weboldal Készítés
           </Link>
           <a
             href="https://x.com/TTokoli63778"
@@ -59,7 +59,7 @@ export function Navbar() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-foreground"
-          aria-label="Menu megnyitasa"
+          aria-label="Menü megnyitása"
         >
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -74,14 +74,14 @@ export function Navbar() {
               onClick={() => setMobileOpen(false)}
               className="text-sm font-medium text-foreground"
             >
-              Google Terkep
+              Google Térkép
             </Link>
             <Link
               href="/weboldal"
               onClick={() => setMobileOpen(false)}
               className="text-sm font-medium text-muted-foreground"
             >
-              Weboldal Keszites
+              Weboldal Készítés
             </Link>
             <a
               href="https://x.com/TTokoli63778"

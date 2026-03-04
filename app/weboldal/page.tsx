@@ -5,43 +5,43 @@ import { WeboldalForm } from "@/components/weboldal-form"
 import { Globe, Smartphone, Zap, RefreshCw, Shield, HeadphonesIcon } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Weboldal Keszites | TTamas Marketing",
+  title: "Weboldal Készítés | Tamas Marketing",
   description:
-    "Professzionalis weboldal keszites vallalkozasoknak. Modern, gyors, telefonon is jol mukodik.",
+    "Professzionális weboldal készítés vállalkozásoknak. Modern, gyors, telefonon is jól működik.",
 }
 
 const webFeatures = [
   {
     icon: Globe,
-    title: "Egyedi megjelenes",
-    description: "Letisztult, atlathato weboldal, ami erthetoen bemutatja a vallalkozasat es megkonnyiti a kapcsolatfelvetelt.",
+    title: "Egyedi megjelenés",
+    description: "Letisztult, átlátható weboldal, ami érthetően bemutatja a vállalkozását és megkönnyíti a kapcsolatfelvételt.",
   },
   {
     icon: Smartphone,
-    title: "Telefonon es szamitogepen is jol mukodik",
-    description: "Reszponziv design, ami minden eszkozrol tokeletesen nez ki.",
+    title: "Telefonon és számítógépen is jól működik",
+    description: "Reszponzív design, ami minden eszközről tökéletesen néz ki.",
   },
   {
     icon: Zap,
-    title: "Gyors betoltes",
-    description: "Optimalizalt teljesitmeny, hogy latogatoi ne varjanak es ne menjenek el.",
+    title: "Gyors betöltés",
+    description: "Optimalizált teljesítmény, hogy látogatói ne várjanak és ne menjenek el.",
   },
 ]
 
 const supportFeatures = [
   {
     icon: RefreshCw,
-    title: "Frissitesek",
-    description: "Rendszeres tartalmi es technikai frissitesek.",
+    title: "Frissítések",
+    description: "Rendszeres tartalmi és technikai frissítések.",
   },
   {
     icon: Shield,
-    title: "Biztonsag",
-    description: "Biztonsagi mentesek es vedelem.",
+    title: "Biztonság",
+    description: "Biztonsági mentések és védelem.",
   },
   {
     icon: HeadphonesIcon,
-    title: "Gyors segitseg",
+    title: "Gyors segítség",
     description: "Ha gond van, gyorsan megoldjuk.",
   },
 ]
@@ -58,28 +58,28 @@ export default function WeboldalPage() {
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-6 inline-flex items-center rounded-full border border-accent/20 bg-accent/10 px-4 py-1.5">
             <span className="text-xs font-semibold uppercase tracking-widest text-accent">
-              Weboldal keszites
+              Weboldal készítés
             </span>
           </div>
 
           <h1 className="font-serif text-4xl leading-tight tracking-tight text-foreground md:text-6xl text-balance">
-            Professzionalis Weboldal Keszites{" "}
-            <span className="text-accent">Vallalkozasoknak</span>
+            Professzionális Weboldal Készítés{" "}
+            <span className="text-accent">Vállalkozásoknak</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Ha az emberek Onre keresnek, de nem talalnak ignyes weboldalt, nagy esellyel a versenytarsat hivjak fel.
+            Ha az emberek Önre keresnek, de nem találnak igényes weboldalt, nagy eséllyel a versenytársát hívják fel.
           </p>
 
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            Egy jol felepitett weboldal bizalmat ad es tobb megkereset hoz. Mi ilyen weboldalakat keszitunk. Modern. Gyors. Telefonon is jol mukodik.
+            Egy jól felépített weboldal bizalmat ad és több megkeresést hoz. Mi ilyen weboldalakat készítünk. Modern. Gyors. Telefonon is jól működik.
           </p>
 
           <a
             href="#weboldal-urlap"
             className="mt-10 inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90"
           >
-            Ajanlatot kerek
+            Ajánlatot kérek
           </a>
         </div>
       </section>
@@ -89,10 +89,10 @@ export default function WeboldalPage() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
             <h2 className="font-serif text-3xl tracking-tight text-foreground md:text-4xl text-balance">
-              Mit kap tolunk?
+              Mit kap tőlünk?
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Weboldal keszites
+              Weboldal készítés
             </p>
           </div>
 
@@ -122,10 +122,10 @@ export default function WeboldalPage() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
             <h2 className="font-serif text-3xl tracking-tight text-foreground md:text-4xl text-balance">
-              Folyamatos segitseg
+              Folyamatos segítség
             </h2>
             <p className="mt-4 text-muted-foreground">
-              A weboldalnak mindig mukodnie kell.
+              A weboldalnak mindig működnie kell.
             </p>
           </div>
 
@@ -154,16 +154,16 @@ export default function WeboldalPage() {
       <section className="bg-primary py-24 px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-serif text-3xl tracking-tight text-primary-foreground md:text-4xl text-balance">
-            Nincs kockazat
+            Nincs kockázat
           </h2>
           <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-primary-foreground/70">
-            Csak akkor kell fizetnie, ha elegedett a weboldallal es mindent atadtunk Onnek.
+            Csak akkor kell fizetnie, ha elégedett a weboldallal és mindent átadtunk Önnek.
           </p>
           <a
             href="#weboldal-urlap"
             className="mt-10 inline-flex items-center justify-center rounded-lg bg-accent px-10 py-4 text-sm font-semibold text-accent-foreground transition-all hover:opacity-90"
           >
-            Ajanlatot kerek
+            Ajánlatot kérek
           </a>
         </div>
       </section>

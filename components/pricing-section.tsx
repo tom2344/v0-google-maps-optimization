@@ -1,13 +1,13 @@
 import { Check } from "lucide-react"
 
 const features = [
-  "Top 5 cel 90 napon belul",
-  "Ha nem erjuk el, tovabb dolgozunk dijmentesen",
-  "75%+ keresesi lathatosag",
-  "Teljes konkurenciaelemzes",
-  "Ketheti frissitesek",
-  "Fo kulcsszora rangsorolas",
-  "Teljes weboldal optimalizalas",
+  "Top 5 cél 90 napon belül",
+  "Ha nem érjük el, tovább dolgozunk díjmentesen",
+  "75%+ keresési láthatóság",
+  "Teljes konkurenciaelemzés",
+  "Kétheti frissítések",
+  "Fő kulcsszóra rangsorolás",
+  "Teljes weboldal optimalizálás",
 ]
 
 export function PricingSection() {
@@ -15,10 +15,10 @@ export function PricingSection() {
     <section className="py-24 px-6">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="font-serif text-3xl tracking-tight text-foreground md:text-4xl">
-          Csomag ajanlat
+          Csomag ajánlat
         </h2>
         <p className="mt-4 text-muted-foreground">
-          Nincs szerzodes. Barmikor lemondható.
+          Nincs szerződés. Bármikor lemondható.
         </p>
 
         <div className="mt-12 rounded-3xl border-2 border-accent bg-card p-10 shadow-xl">
@@ -26,7 +26,7 @@ export function PricingSection() {
             <span className="font-serif text-5xl font-bold text-foreground md:text-6xl">
               159.000
             </span>
-            <span className="text-lg text-muted-foreground">Ft / ho</span>
+            <span className="text-lg text-muted-foreground">Ft / hó</span>
           </div>
 
           <div className="mx-auto mt-10 max-w-sm text-left">
@@ -48,7 +48,7 @@ export function PricingSection() {
             href="#urlap"
             className="mt-10 inline-flex items-center justify-center rounded-lg bg-accent px-10 py-4 text-sm font-semibold text-accent-foreground transition-all hover:opacity-90"
           >
-            Kezdjunk bele
+            Kezdjünk bele
           </a>
         </div>
       </div>

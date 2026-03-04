@@ -9,17 +9,17 @@ export function HeroSection() {
       <div className="mx-auto max-w-4xl text-center">
         <div className="mb-6 inline-flex items-center rounded-full border border-accent/20 bg-accent/10 px-4 py-1.5">
           <span className="text-xs font-semibold uppercase tracking-widest text-accent">
-            Garantalt eredmeny
+            Garantált eredmény
           </span>
         </div>
 
         <h1 className="font-serif text-4xl leading-tight tracking-tight text-foreground md:text-6xl lg:text-7xl text-balance">
-          Top 5 helyezes a Google terkepen{" "}
-          <span className="text-accent">90 napon belul</span>
+          Top 5 helyezés a Google térképen{" "}
+          <span className="text-accent">90 napon belül</span>
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-          A keresesek 75%-a a Google Terkep elso 5 talalatara erkezik. Ha On nincs ott, gyakorlatilag lathatatlan.
+          A keresések 75%-a a Google Térkép első 5 találatára érkezik. Ha Ön nincs ott, gyakorlatilag láthatatlan.
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -27,13 +27,13 @@ export function HeroSection() {
             href="#urlap"
             className="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90"
           >
-            Kezdjunk bele
+            Kezdjünk bele
           </a>
           <a
             href="#hogyan"
             className="inline-flex items-center justify-center rounded-lg border border-border bg-card px-8 py-4 text-sm font-semibold text-foreground transition-all hover:bg-muted"
           >
-            Hogyan mukodik?
+            Hogyan működik?
           </a>
         </div>
       </div>
