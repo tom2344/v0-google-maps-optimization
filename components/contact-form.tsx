@@ -6,10 +6,12 @@ import { Send, Loader2 } from "lucide-react"
 export function ContactForm() {
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setSubmitting(true)
+    setError(null)
 
     const formData = new FormData(e.currentTarget)
     const data = Object.fromEntries(formData.entries())
@@ -22,9 +24,12 @@ export function ContactForm() {
       })
       if (res.ok) {
         setSubmitted(true)
+      } else {
+        const json = await res.json().catch(() => null)
+        setError(json?.error || "Hiba történt a beküldés során. Kérjük, próbálja újra.")
       }
     } catch {
-      // silently fail
+      setError("Hiba történt a beküldés során. Kérjük, próbálja újra.")
     } finally {
       setSubmitting(false)
     }
@@ -59,6 +64,12 @@ export function ContactForm() {
             Töltse ki az alábbi űrlapot, és elemezzük jelenlegi helyzetét.
           </p>
         </div>
+
+        {error && (
+          <div className="mb-4 rounded-lg border border-destructive/30 bg-destructive/5 px-4 py-3 text-sm text-destructive">
+            {error}
+          </div>
+        )}
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           <div className="grid gap-5 sm:grid-cols-2">
