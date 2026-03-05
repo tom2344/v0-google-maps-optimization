@@ -3,8 +3,12 @@ import { Resend } from "resend"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-const RESEND_RECEIVING_ADDRESS = "contact@riniokgri.resend.app"
-const VERIFIED_SENDER = "Tamas Marketing <noreply@ttamasmarketing.com>"
+// Send directly to your inbox — no webhook middleman needed
+const RECIPIENT = "tamas@ttamasmarketing.com"
+
+// Use onboarding@resend.dev if you haven't verified your own domain yet on Resend.
+// Once ttamasmarketing.com is verified, switch to: "Tamas Marketing <noreply@ttamasmarketing.com>"
+const SENDER = "Tamas Marketing <onboarding@resend.dev>"
 
 export async function POST(request: Request) {
   try {
@@ -67,9 +71,11 @@ export async function POST(request: Request) {
       .filter(Boolean)
       .join("\n")
 
-    const { error } = await resend.emails.send({
-      from: VERIFIED_SENDER,
-      to: [RESEND_RECEIVING_ADDRESS],
+    console.log("[v0] Sending email to:", RECIPIENT, "from:", SENDER, "subject:", subject)
+
+    const { data, error } = await resend.emails.send({
+      from: SENDER,
+      to: [RECIPIENT],
       replyTo: email,
       subject,
       html: htmlBody,
@@ -77,16 +83,17 @@ export async function POST(request: Request) {
     })
 
     if (error) {
-      console.error("Resend hiba:", error)
+      console.error("[v0] Resend error:", JSON.stringify(error))
       return NextResponse.json(
         { error: "Hiba történt az email küldése során." },
         { status: 500 }
       )
     }
 
-    return NextResponse.json({ success: true })
+    console.log("[v0] Email sent successfully, id:", data?.id)
+    return NextResponse.json({ success: true, id: data?.id })
   } catch (err) {
-    console.error("API hiba:", err)
+    console.error("[v0] API error:", err)
     return NextResponse.json(
       { error: "Hiba történt a beküldés során." },
       { status: 500 }
