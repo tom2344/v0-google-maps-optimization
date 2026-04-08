@@ -13,7 +13,7 @@ export function Footer() {
               <span className="text-xl font-light opacity-70">Marketing</span>
             </Link>
             <p className="mt-2 text-sm opacity-60">
-              info@tamasmarketing.com
+              tokolitamas7@gmail.com
             </p>
           </div>
 
