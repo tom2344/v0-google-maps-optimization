@@ -24,9 +24,9 @@ const steps = [
   {
     number: "04",
     icon: BarChart3,
-    title: "Mi működik?",
+    title: "Exkluzivitás",
     description:
-      "Mérjük az adatokat, és arra fókuszálunk, ami valóban ügyfelet hoz.",
+      "Ameddig Önnél együtt dolgozunk, más versenytársával nem fogunk együttműködni.",
   },
 ]
 

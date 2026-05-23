@@ -24,7 +24,7 @@ export function PricingSection() {
         <div className="mt-12 rounded-3xl border-2 border-accent bg-card p-10 shadow-xl">
           <div className="flex items-baseline justify-center gap-1">
             <span className="font-serif text-5xl font-bold text-foreground md:text-6xl">
-              159.000
+              90.000
             </span>
             <span className="text-lg text-muted-foreground">Ft / hó</span>
           </div>
