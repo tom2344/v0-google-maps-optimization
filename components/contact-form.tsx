@@ -42,9 +42,9 @@ export function ContactForm() {
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 text-accent">
             <Send className="h-7 w-7" />
           </div>
-          <h3 className="mt-6 font-serif text-2xl text-foreground">
+          <h2 className="mt-6 font-serif text-2xl text-foreground">
             Köszönjük!
-          </h3>
+          </h2>
           <p className="mt-2 text-muted-foreground">
             Hamarosan felvesszük Önnel a kapcsolatot.
           </p>
@@ -58,10 +58,10 @@ export function ContactForm() {
       <div className="mx-auto max-w-xl">
         <div className="mb-12 text-center">
           <h2 className="font-serif text-3xl tracking-tight text-foreground md:text-4xl text-balance">
-            Ingyenes elemzést kérek
+            Ingyenes Google Térkép elemzés
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Töltse ki az alábbi űrlapot, és elemezzük jelenlegi helyzetét.
+            Töltse ki az űrlapot, és elemezzük Google Cégprofilját és helyi láthatóságát.
           </p>
         </div>
 

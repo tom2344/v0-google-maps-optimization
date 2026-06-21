@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { ROUTES } from "@/lib/seo"
 
 export function Footer() {
   return (
@@ -13,22 +14,25 @@ export function Footer() {
               <span className="text-xl font-light opacity-70">Marketing</span>
             </Link>
             <p className="mt-2 text-sm opacity-60">
-              info@tamasmarketing.com
+              Weboldal készítés és Google Térkép optimalizálás Magyarországon.
+            </p>
+            <p className="mt-1 text-sm opacity-60">
+              <a href="mailto:info@tamasmarketing.com">info@tamasmarketing.com</a>
             </p>
           </div>
 
-          <div className="flex items-center gap-8">
+          <nav className="flex items-center gap-8" aria-label="Lábléc navigáció">
             <Link
-              href="/"
+              href={ROUTES.weboldal}
               className="text-sm opacity-70 transition-opacity hover:opacity-100"
             >
-              Google Térkép
+              Weboldal készítés
             </Link>
             <Link
-              href="/weboldal"
+              href={ROUTES.googleTerkep}
               className="text-sm opacity-70 transition-opacity hover:opacity-100"
             >
-              Weboldal Készítés
+              Google Térkép optimalizálás
             </Link>
             <a
               href="https://x.com/TTokoli63778"
@@ -46,11 +50,11 @@ export function Footer() {
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
             </a>
-          </div>
+          </nav>
         </div>
 
         <div className="mt-8 border-t border-primary-foreground/10 pt-8 text-center text-xs opacity-50">
-          {'© 2026 Tamas Marketing. Minden jog fenntartva.'}
+          © 2026 Tamas Marketing. Minden jog fenntartva.
         </div>
       </div>
     </footer>

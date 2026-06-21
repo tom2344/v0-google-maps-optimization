@@ -1,39 +1,39 @@
-import { Eye, Banknote, TrendingUp } from "lucide-react"
+import { Globe, Smartphone, Zap } from "lucide-react"
 
 const benefits = [
   {
-    icon: Eye,
-    title: "Láthatóság",
+    icon: Globe,
+    title: "Professzionális megjelenés",
     description:
-      "Az ügyfelek 75%-a az első 5 találat közül választ szolgáltatót. Ha nincs köztük, nem Önt fogják hívni.",
+      "Egy jól felépített céges weboldal azonnal bizalmat ad. Az ügyfelek komolyabbnak látják a vállalkozását, még mielőtt felvennék Önnel a kapcsolatot.",
   },
   {
-    icon: Banknote,
-    title: "Ingyenes forgalom",
+    icon: Smartphone,
+    title: "Mobilbarát kivitelezés",
     description:
-      "Nincs kattintásonkénti fizetés. Nincs hatalmas hirdetési büdzsé, mint Google vagy Meta Ads esetén.",
+      "A keresések többsége telefonról érkezik. Weboldalaink minden eszközön gyorsan betöltődnek és könnyen használhatók.",
   },
   {
-    icon: TrendingUp,
-    title: "Hosszú távú stratégia",
+    icon: Zap,
+    title: "Több megkeresés, kevesebb elveszett ügyfél",
     description:
-      "Ha bekerül az első 5-be, jellemzően évekig ott marad. Extra havi hirdetési költségek nélkül.",
+      "Ha nincs weboldala vagy elavult, az érdeklődők továbblépnek. Egy jól megtervezett oldal segít, hogy Önt válasszák.",
   },
 ]
 
-export function BenefitsSection() {
+export function HomeBenefitsSection() {
   return (
-    <section className="bg-card py-24 px-6" aria-labelledby="maps-benefits-heading">
+    <section className="bg-card py-24 px-6" aria-labelledby="home-benefits-heading">
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
           <h2
-            id="maps-benefits-heading"
+            id="home-benefits-heading"
             className="font-serif text-3xl tracking-tight text-foreground md:text-4xl text-balance"
           >
-            Miért éri meg a Google Térkép optimalizálás?
+            Miért éri meg a céges weboldal készítés?
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Local SEO Magyarországon — tartós láthatóság, hirdetési költség nélkül.
+            A weboldal ma már nem luxus — alapvető üzleti eszköz.
           </p>
         </div>
 
@@ -44,7 +44,7 @@ export function BenefitsSection() {
               className="group rounded-2xl border border-border bg-background p-8 transition-all hover:border-accent/30 hover:shadow-lg"
             >
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                <benefit.icon className="h-6 w-6" />
+                <benefit.icon className="h-6 w-6" aria-hidden="true" />
               </div>
               <h3 className="mb-3 text-lg font-semibold text-foreground">
                 {benefit.title}

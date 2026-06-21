@@ -42,9 +42,9 @@ export function WeboldalForm() {
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 text-accent">
             <Send className="h-7 w-7" />
           </div>
-          <h3 className="mt-6 font-serif text-2xl text-foreground">
+          <h2 className="mt-6 font-serif text-2xl text-foreground">
             Köszönjük!
-          </h3>
+          </h2>
           <p className="mt-2 text-muted-foreground">
             Hamarosan felvesszük Önnel a kapcsolatot.
           </p>
