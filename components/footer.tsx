@@ -17,7 +17,7 @@ export function Footer() {
               Weboldal készítés és Google Térkép optimalizálás magyar vállalkozásoknak.
             </p>
             <p className="mt-1 text-sm opacity-60">
-              <a href="mailto:info@tamasmarketing.com">info@tamasmarketing.com</a>
+              <a href="mailto:tokolitamas7@gmail.com">tokolitamas7@gmail.com</a>
             </p>
           </div>
 

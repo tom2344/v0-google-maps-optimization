@@ -3,12 +3,8 @@ import { Resend } from "resend"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-// Send directly to your inbox — no webhook middleman needed
-const RECIPIENT = "tamas@ttamasmarketing.com"
-
-// Use onboarding@resend.dev if you haven't verified your own domain yet on Resend.
-// Once ttamasmarketing.com is verified, switch to: "Tamas Marketing <noreply@ttamasmarketing.com>"
-const SENDER = "Tamas Marketing <onboarding@resend.dev>"
+const RECIPIENT = "tokolitamas7@gmail.com"
+const SENDER = "Tamas Marketing <no-reply@ttamasmarketing.com>"
 
 export async function POST(request: Request) {
   try {
