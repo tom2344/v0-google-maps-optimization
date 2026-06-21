@@ -32,11 +32,14 @@ const steps = [
 
 export function HowItWorksSection() {
   return (
-    <section id="hogyan" className="bg-primary py-24 px-6">
+    <section id="hogyan" className="bg-primary py-24 px-6" aria-labelledby="how-it-works-heading">
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
-          <h2 className="font-serif text-3xl tracking-tight text-primary-foreground md:text-4xl text-balance">
-            Hogyan működik?
+          <h2
+            id="how-it-works-heading"
+            className="font-serif text-3xl tracking-tight text-primary-foreground md:text-4xl text-balance"
+          >
+            Hogyan működik a Google Térkép optimalizálás?
           </h2>
           <p className="mt-4 text-primary-foreground/60">
             Egyszerűbb, mint gondolná.
@@ -45,7 +48,7 @@ export function HowItWorksSection() {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((step) => (
-            <div
+            <article
               key={step.number}
               className="relative rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 p-8"
             >
@@ -61,7 +64,7 @@ export function HowItWorksSection() {
               <p className="text-sm leading-relaxed text-primary-foreground/60">
                 {step.description}
               </p>
-            </div>
+            </article>
           ))}
         </div>
       </div>

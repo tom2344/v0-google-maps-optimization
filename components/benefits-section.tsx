@@ -23,17 +23,23 @@ const benefits = [
 
 export function BenefitsSection() {
   return (
-    <section className="bg-card py-24 px-6">
+    <section className="bg-card py-24 px-6" aria-labelledby="maps-benefits-heading">
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
-          <h2 className="font-serif text-3xl tracking-tight text-foreground md:text-4xl text-balance">
-            Megéri ez egyáltalán?
+          <h2
+            id="maps-benefits-heading"
+            className="font-serif text-3xl tracking-tight text-foreground md:text-4xl text-balance"
+          >
+            Miért éri meg a Google Térkép optimalizálás?
           </h2>
+          <p className="mt-4 text-muted-foreground">
+            Local SEO Magyarországon — tartós láthatóság, hirdetési költség nélkül.
+          </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
           {benefits.map((benefit) => (
-            <div
+            <article
               key={benefit.title}
               className="group rounded-2xl border border-border bg-background p-8 transition-all hover:border-accent/30 hover:shadow-lg"
             >
@@ -46,7 +52,7 @@ export function BenefitsSection() {
               <p className="text-sm leading-relaxed text-muted-foreground">
                 {benefit.description}
               </p>
-            </div>
+            </article>
           ))}
         </div>
       </div>

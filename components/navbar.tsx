@@ -4,6 +4,12 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import { ROUTES } from "@/lib/seo"
+
+const navLinks = [
+  { href: ROUTES.weboldal, label: "Weboldal készítés", primary: true },
+  { href: ROUTES.googleTerkep, label: "Google Térkép optimalizálás", primary: false },
+]
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -11,7 +17,10 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <nav
+        className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
+        aria-label="Fő navigáció"
+      >
         <Link href="/" className="flex items-center gap-2">
           <span className="text-xl font-bold tracking-tight text-foreground font-serif">
             Tamas
@@ -19,23 +28,27 @@ export function Navbar() {
           <span className="text-xl font-light text-muted-foreground">Marketing</span>
         </Link>
 
-        {/* Desktop Nav */}
         <div className="hidden items-center gap-8 md:flex">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`text-sm transition-colors hover:text-accent ${
+                pathname === link.href
+                  ? "font-semibold text-foreground"
+                  : link.primary
+                    ? "font-semibold text-muted-foreground"
+                    : "font-medium text-muted-foreground"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
           <Link
-            href="/"
-            className={`text-sm font-medium transition-colors hover:text-accent ${
-              pathname === "/" ? "text-foreground" : "text-muted-foreground"
-            }`}
+            href={`${ROUTES.weboldal}#weboldal-urlap`}
+            className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90"
           >
-            Google Térkép
-          </Link>
-          <Link
-            href="/weboldal"
-            className={`text-sm font-medium transition-colors hover:text-accent ${
-              pathname === "/weboldal" ? "text-foreground" : "text-muted-foreground"
-            }`}
-          >
-            Weboldal Készítés
+            Ajánlatot kérek
           </Link>
           <a
             href="https://x.com/TTokoli63778"
@@ -55,33 +68,41 @@ export function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Menu Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-foreground"
-          aria-label="Menü megnyitása"
+          aria-label={mobileOpen ? "Menü bezárása" : "Menü megnyitása"}
+          aria-expanded={mobileOpen}
         >
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </nav>
 
-      {/* Mobile Nav */}
       {mobileOpen && (
         <div className="border-t border-border bg-background px-6 py-4 md:hidden">
           <div className="flex flex-col gap-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className={`text-sm ${
+                  pathname === link.href
+                    ? "font-semibold text-foreground"
+                    : link.primary
+                      ? "font-semibold text-muted-foreground"
+                      : "font-medium text-muted-foreground"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
             <Link
-              href="/"
+              href={`${ROUTES.weboldal}#weboldal-urlap`}
               onClick={() => setMobileOpen(false)}
-              className="text-sm font-medium text-foreground"
+              className="text-sm font-semibold text-accent"
             >
-              Google Térkép
-            </Link>
-            <Link
-              href="/weboldal"
-              onClick={() => setMobileOpen(false)}
-              className="text-sm font-medium text-muted-foreground"
-            >
-              Weboldal Készítés
+              Ajánlatot kérek
             </Link>
             <a
               href="https://x.com/TTokoli63778"

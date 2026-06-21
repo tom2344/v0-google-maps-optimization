@@ -21,12 +21,18 @@ export function BeforeAfterSection() {
   const [activeTab, setActiveTab] = useState<"before" | "after">("before")
 
   return (
-    <section className="py-24 px-6">
+    <section className="py-24 px-6" aria-labelledby="before-after-heading">
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
-          <h2 className="font-serif text-3xl tracking-tight text-foreground md:text-4xl text-balance">
-            Az Ön cége - Példa utca 12, 6720 Szeged
+          <h2
+            id="before-after-heading"
+            className="font-serif text-3xl tracking-tight text-foreground md:text-4xl text-balance"
+          >
+            Google Térkép optimalizálás előtte és utána
           </h2>
+          <p className="mt-4 text-muted-foreground">
+            Példa: helyi vállalkozás Szegeden — valós eredményekkel.
+          </p>
         </div>
 
         {/* Toggle */}
@@ -64,6 +70,7 @@ export function BeforeAfterSection() {
                 alt="Google Térkép helyezések optimalizálás előtt - piros jelölőkkel, többségük 20-as helyezést mutat"
                 width={760}
                 height={760}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="w-full"
               />
             ) : (
@@ -72,6 +79,7 @@ export function BeforeAfterSection() {
                 alt="Google Térkép helyezések optimalizálás után - zöld jelölőkkel, többségük 1-es helyezést mutat"
                 width={940}
                 height={860}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="w-full"
               />
             )}

@@ -12,10 +12,13 @@ const features = [
 
 export function PricingSection() {
   return (
-    <section className="py-24 px-6">
+    <section className="py-24 px-6" aria-labelledby="pricing-heading">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="font-serif text-3xl tracking-tight text-foreground md:text-4xl">
-          Csomag ajánlat
+        <h2
+          id="pricing-heading"
+          className="font-serif text-3xl tracking-tight text-foreground md:text-4xl"
+        >
+          Google Térkép optimalizálás csomag
         </h2>
         <p className="mt-4 text-muted-foreground">
           Nincs szerződés. Bármikor lemondható.
@@ -48,7 +51,7 @@ export function PricingSection() {
             href="#urlap"
             className="mt-10 inline-flex items-center justify-center rounded-lg bg-accent px-10 py-4 text-sm font-semibold text-accent-foreground transition-all hover:opacity-90"
           >
-            Kezdjünk bele
+            Ingyenes elemzést kérek
           </a>
         </div>
       </div>
