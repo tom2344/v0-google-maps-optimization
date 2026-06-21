@@ -4,8 +4,8 @@ import { Analytics } from "@vercel/analytics/next"
 import { JsonLd } from "@/components/json-ld"
 import {
   DEFAULT_OG_IMAGE,
-  localBusinessSchema,
-  organizationSchema,
+  globalSchemaGraph,
+  PAGE_META,
   SITE_LOCALE,
   SITE_NAME,
   SITE_URL,
@@ -27,31 +27,45 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | Weboldal készítés és marketing`,
-    template: `%s | ${SITE_NAME}`,
+    default: PAGE_META.home.title,
+    template: `%s`,
   },
-  description:
-    "Professzionális weboldal készítés és Google Térkép optimalizálás magyar vállalkozásoknak. Több megkeresés, jobb online láthatóság.",
+  description: PAGE_META.home.description,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: "marketing",
   openGraph: {
     type: "website",
     locale: SITE_LOCALE,
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME} | Weboldal készítés és marketing`,
-    description:
-      "Professzionális weboldal készítés és Google Térkép optimalizálás magyar vállalkozásoknak.",
-    images: [{ url: DEFAULT_OG_IMAGE, alt: SITE_NAME }],
+    title: PAGE_META.home.title,
+    description: PAGE_META.home.description,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        alt: `${SITE_NAME} – weboldal készítés Magyarországon`,
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} | Weboldal készítés és marketing`,
-    description:
-      "Professzionális weboldal készítés és Google Térkép optimalizálás magyar vállalkozásoknak.",
+    title: PAGE_META.home.title,
+    description: PAGE_META.home.description,
     images: [DEFAULT_OG_IMAGE],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   formatDetection: {
     email: false,
@@ -70,7 +84,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${dmSerif.variable} font-sans antialiased`}
       >
-        <JsonLd data={[organizationSchema(), localBusinessSchema()]} />
+        <JsonLd data={globalSchemaGraph()} />
         {children}
         <Analytics />
       </body>

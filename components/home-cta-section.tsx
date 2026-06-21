@@ -20,6 +20,15 @@ export function HomeCtaSection() {
         >
           Ajánlatot kérek
         </Link>
+        <p className="mt-6 text-sm text-primary-foreground/60">
+          Helyi láthatóságra is szüksége van?{" "}
+          <Link
+            href={ROUTES.googleTerkep}
+            className="font-semibold text-primary-foreground underline-offset-4 hover:underline"
+          >
+            Google Térkép optimalizálás
+          </Link>
+        </p>
       </div>
     </section>
   )

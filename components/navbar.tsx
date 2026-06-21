@@ -7,8 +7,8 @@ import { Menu, X } from "lucide-react"
 import { ROUTES } from "@/lib/seo"
 
 const navLinks = [
-  { href: ROUTES.weboldal, label: "Weboldal készítés" },
-  { href: ROUTES.googleTerkep, label: "Google Térkép" },
+  { href: ROUTES.weboldal, label: "Weboldal készítés", primary: true },
+  { href: ROUTES.googleTerkep, label: "Google Térkép optimalizálás", primary: false },
 ]
 
 export function Navbar() {
@@ -33,8 +33,12 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-accent ${
-                pathname === link.href ? "text-foreground" : "text-muted-foreground"
+              className={`text-sm transition-colors hover:text-accent ${
+                pathname === link.href
+                  ? "font-semibold text-foreground"
+                  : link.primary
+                    ? "font-semibold text-muted-foreground"
+                    : "font-medium text-muted-foreground"
               }`}
             >
               {link.label}
@@ -82,8 +86,12 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className={`text-sm font-medium ${
-                  pathname === link.href ? "text-foreground" : "text-muted-foreground"
+                className={`text-sm ${
+                  pathname === link.href
+                    ? "font-semibold text-foreground"
+                    : link.primary
+                      ? "font-semibold text-muted-foreground"
+                      : "font-medium text-muted-foreground"
                 }`}
               >
                 {link.label}

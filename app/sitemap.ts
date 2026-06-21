@@ -6,15 +6,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: SITE_URL,
+      url: absoluteUrl(ROUTES.weboldal),
       lastModified,
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: absoluteUrl(ROUTES.weboldal),
+      url: SITE_URL,
       lastModified,
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 0.9,
     },
     {

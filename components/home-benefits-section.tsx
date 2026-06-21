@@ -1,4 +1,6 @@
+import Link from "next/link"
 import { Globe, Smartphone, Zap } from "lucide-react"
+import { ROUTES } from "@/lib/seo"
 
 const benefits = [
   {
@@ -33,7 +35,13 @@ export function HomeBenefitsSection() {
             Miért éri meg a céges weboldal készítés?
           </h2>
           <p className="mt-4 text-muted-foreground">
-            A weboldal ma már nem luxus — alapvető üzleti eszköz.
+            A weboldal ma már nem luxus — alapvető üzleti eszköz.{" "}
+            <Link
+              href={ROUTES.weboldal}
+              className="font-semibold text-accent underline-offset-4 hover:underline"
+            >
+              Weboldal készítés részletei
+            </Link>
           </p>
         </div>
 

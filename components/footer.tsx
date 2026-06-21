@@ -5,26 +5,35 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-primary text-primary-foreground">
       <div className="mx-auto max-w-6xl px-6 py-12">
-        <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+        <div className="grid gap-8 md:grid-cols-2 md:items-start">
           <div>
-            <Link href="/" className="flex items-center gap-2">
+            <Link href={ROUTES.home} className="flex items-center gap-2">
               <span className="text-xl font-bold tracking-tight font-serif">
                 Tamas
               </span>
               <span className="text-xl font-light opacity-70">Marketing</span>
             </Link>
             <p className="mt-2 text-sm opacity-60">
-              Weboldal készítés és Google Térkép optimalizálás Magyarországon.
+              Weboldal készítés és Google Térkép optimalizálás magyar vállalkozásoknak.
             </p>
             <p className="mt-1 text-sm opacity-60">
               <a href="mailto:info@tamasmarketing.com">info@tamasmarketing.com</a>
             </p>
           </div>
 
-          <nav className="flex items-center gap-8" aria-label="Lábléc navigáció">
+          <nav
+            className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-8"
+            aria-label="Lábléc navigáció"
+          >
+            <Link
+              href={ROUTES.home}
+              className="text-sm opacity-70 transition-opacity hover:opacity-100"
+            >
+              Főoldal
+            </Link>
             <Link
               href={ROUTES.weboldal}
-              className="text-sm opacity-70 transition-opacity hover:opacity-100"
+              className="text-sm font-semibold opacity-90 transition-opacity hover:opacity-100"
             >
               Weboldal készítés
             </Link>

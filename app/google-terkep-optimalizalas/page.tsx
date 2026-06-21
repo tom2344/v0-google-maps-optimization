@@ -1,4 +1,3 @@
-import type { Metadata } from "next"
 import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/hero-section"
@@ -10,52 +9,29 @@ import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
 import { JsonLd } from "@/components/json-ld"
 import {
-  absoluteUrl,
-  DEFAULT_OG_IMAGE,
-  googleTerkepServiceSchema,
+  createPageMetadata,
+  GOOGLE_TERKEP_OG_IMAGE,
+  googleTerkepPageSchema,
+  PAGE_META,
   ROUTES,
-  webPageSchema,
 } from "@/lib/seo"
 
-const title = "Google Térkép optimalizálás – Top 5 helyezés 90 napon belül"
-const description =
-  "Google Térkép és Google Cégprofil optimalizálás Magyarországon. Local SEO stratégia — Top 5 helyezés 90 napon belül, garantálva. Ingyenes elemzés."
-
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: {
-    canonical: absoluteUrl(ROUTES.googleTerkep),
+export const metadata = createPageMetadata({
+  title: PAGE_META.googleTerkep.title,
+  description: PAGE_META.googleTerkep.description,
+  path: ROUTES.googleTerkep,
+  ogImage: {
+    url: GOOGLE_TERKEP_OG_IMAGE,
+    alt: "Google Térkép optimalizálás eredménye – Top helyezés Magyarországon",
+    width: 1200,
+    height: 630,
   },
-  openGraph: {
-    title,
-    description,
-    url: absoluteUrl(ROUTES.googleTerkep),
-    images: [
-      {
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-tD9FKxs3qTT8vPn2yHqlGSO4unxP1D.png",
-        alt: "Google Térkép optimalizálás eredménye – Top helyezés",
-      },
-    ],
-  },
-  twitter: {
-    title,
-    description,
-    images: [
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-tD9FKxs3qTT8vPn2yHqlGSO4unxP1D.png",
-    ],
-  },
-}
+})
 
 export default function GoogleTerkepOptimalizalasPage() {
   return (
     <>
-      <JsonLd
-        data={[
-          webPageSchema({ name: title, description, path: ROUTES.googleTerkep }),
-          googleTerkepServiceSchema(),
-        ]}
-      />
+      <JsonLd data={googleTerkepPageSchema()} />
       <main>
         <Navbar />
         <HeroSection />
@@ -68,12 +44,12 @@ export default function GoogleTerkepOptimalizalasPage() {
             <p className="text-sm text-muted-foreground">
               Emellett{" "}
               <Link
-                href="/weboldal-keszites"
+                href={ROUTES.weboldal}
                 className="font-semibold text-accent underline-offset-4 hover:underline"
               >
                 professzionális weboldal készítést
               </Link>{" "}
-              is vállalunk — a weboldal és a Google Cégprofil együtt hozza a legtöbb megkeresést.
+              is vállalunk Magyarországon — a weboldal és a Google Cégprofil együtt hozza a legtöbb megkeresést.
             </p>
           </div>
         </section>

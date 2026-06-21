@@ -1,4 +1,3 @@
-import type { Metadata } from "next"
 import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
@@ -6,35 +5,24 @@ import { WeboldalForm } from "@/components/weboldal-form"
 import { JsonLd } from "@/components/json-ld"
 import {
   absoluteUrl,
-  DEFAULT_OG_IMAGE,
+  createPageMetadata,
+  PAGE_META,
   ROUTES,
-  weboldalServiceSchema,
-  webPageSchema,
+  weboldalPageSchema,
 } from "@/lib/seo"
 import { Globe, Smartphone, Zap, RefreshCw, Shield, HeadphonesIcon } from "lucide-react"
 
-const title = "Weboldal készítés – Professzionális céges weboldal Magyarországon"
-const description =
-  "Céges weboldal készítés vállalkozásoknak. Modern, gyors, SEO-barát weboldal — csak akkor fizet, ha elégedett. Kérjen ingyenes ajánlatot!"
-
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: {
-    canonical: absoluteUrl(ROUTES.weboldal),
+export const metadata = createPageMetadata({
+  title: PAGE_META.weboldal.title,
+  description: PAGE_META.weboldal.description,
+  path: ROUTES.weboldal,
+  ogImage: {
+    url: absoluteUrl(`${ROUTES.weboldal}/opengraph-image`),
+    alt: "Weboldal készítés – Professzionális céges weboldal Magyarországon",
+    width: 1200,
+    height: 630,
   },
-  openGraph: {
-    title,
-    description,
-    url: absoluteUrl(ROUTES.weboldal),
-    images: [{ url: DEFAULT_OG_IMAGE, alt: "Weboldal készítés – Tamas Marketing" }],
-  },
-  twitter: {
-    title,
-    description,
-    images: [DEFAULT_OG_IMAGE],
-  },
-}
+})
 
 const webFeatures = [
   {
@@ -78,12 +66,7 @@ const supportFeatures = [
 export default function WeboldalKeszitesPage() {
   return (
     <>
-      <JsonLd
-        data={[
-          webPageSchema({ name: title, description, path: ROUTES.weboldal }),
-          weboldalServiceSchema(),
-        ]}
-      />
+      <JsonLd data={weboldalPageSchema()} />
       <main>
         <Navbar />
 
@@ -93,7 +76,7 @@ export default function WeboldalKeszitesPage() {
           <div className="mx-auto max-w-4xl text-center">
             <p className="mb-6 inline-flex items-center rounded-full border border-accent/20 bg-accent/10 px-4 py-1.5">
               <span className="text-xs font-semibold uppercase tracking-widest text-accent">
-                Céges weboldal készítés
+                Céges weboldal készítés Magyarországon
               </span>
             </p>
 
@@ -194,12 +177,12 @@ export default function WeboldalKeszitesPage() {
             <p className="text-sm text-muted-foreground">
               Emellett segítünk a helyi láthatóságban is.{" "}
               <Link
-                href="/google-terkep-optimalizalas"
+                href={ROUTES.googleTerkep}
                 className="font-semibold text-accent underline-offset-4 hover:underline"
               >
                 Google Térkép optimalizálás
               </Link>{" "}
-              szolgáltatásunkkal a Google Cégprofilját is a Top 5-be juttathatjuk.
+              szolgáltatásunkkal a Google Cégprofilját is a Top 5-be juttathatjuk Magyarországon.
             </p>
           </div>
         </section>
